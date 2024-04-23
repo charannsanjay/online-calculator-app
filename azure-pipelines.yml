@@ -9,7 +9,7 @@ steps:
     command: 'publish'
     publishWebProjects: true   
 
-- publish: $(System.DefaultWorkingDirectory)/**/*.dll;$(System.DefaultWorkingDirectory)/**/*.exe;$(System.DefaultWorkingDirectory)/*.pdb  # Example publish pattern (adjust based on your project output)
+- publish: /home/vsts/work/1/s/calculator/bin/Debug/net5.0/  # Example publish pattern (adjust based on your project output)
   artifact: drop
   displayName: 'Publish Build Artifacts'
 

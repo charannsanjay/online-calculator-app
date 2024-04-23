@@ -9,11 +9,9 @@ steps:
     command: 'publish'
     publishWebProjects: true   
 
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+- publish: $(System.DefaultWorkingDirectory)/**/*.dll;$(System.DefaultWorkingDirectory)/**/*.exe;$(System.DefaultWorkingDirectory)/*.pdb  # Example publish pattern (adjust based on your project output)
+  artifact: drop
+  displayName: 'Publish Build Artifacts'
 
 # - task: AzureRmWebAppDeployment@4
 #   inputs:

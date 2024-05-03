@@ -21,10 +21,3 @@ steps:
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
 
-# - task: AzureRmWebAppDeployment@4
-#   inputs:
-#     ConnectionType: 'AzureRM'
-#     azureSubscription: 'DevOps-Sub'
-#     appType: 'webApp'
-#     WebAppName: 'csweb'
-#     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
